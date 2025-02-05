@@ -1,6 +1,10 @@
 # 3BTRON: A Blood-Brain Barrier Recognition Network
 
-To promote the sharing of resources, we provide the trained model described in the paper "3BTRON: A Blood-Brain Barrier Recognition Network" optimized for the PyTorch framework. Associated code (including scripts for data pre-processing, training and evaluation, stratification and for generating and visualising GradCAM heatmaps) is also provided. 
+This is the repository associated with the paper "3BTRON: A Blood-Brain Barrier Recognition Network". 
+
+To promote the sharing of resources, we provide the trained model described in the paper, optimized for the PyTorch framework. 
+
+Associated code (including scripts for data pre-processing, training and evaluation, stratification and for generating and visualising GradCAM heatmaps) is also provided. 
 
 The 'requirements.txt' file lists all the dependencies needed to install and run the model and associated code. Please follow the set-up instructions below.
 

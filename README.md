@@ -6,7 +6,7 @@ This is the repository associated with the paper "3BTRON: A Blood-Brain Barrier 
 
 ### The Model
 
-To promote the sharing of resources, we provide the trained model described in the paper, optimized for the PyTorch framework (3BTRON.pt)
+To promote the sharing of resources, we provide the trained model described in the paper, optimized for the PyTorch framework (3BTRON.pt).
 
 ### Code_files
 

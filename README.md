@@ -27,17 +27,17 @@ Code for experiments and figures presented in this study will be made available 
 Create the environment from the environment.yml file:
 ```python
 conda env create -f environment.yml
-```python
+```
 
 Activate the environment: 
 ```python
 conda activate img-classification
-```python
+```
 
 Verify that the environment was installed correctly:
 ```python
 conda env list
-```python
+```
 
 ## Running the Model
 

@@ -59,11 +59,11 @@ model.eval()
 ```
 Alternatively, you can run the python scripts 'generate_outputs_labelled.py' for labelled data or 'generate_outputs_unlabelled.py' for unlabelled data.
 
-To fine-tune the model on your data, you will need to set the model to training mode using:
+To fine-tune the model on your own data, you will need to set the model to training mode using:
 ```python
 model.train()
 ```
-To adapt the model to your data, you will need to retrain the model from scratch.
+To adapt the model to your own data, you will need to retrain the model from scratch.
 
 ## Contact
 

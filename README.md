@@ -43,7 +43,12 @@ conda env list
 
 ## Running the Model
 
+To generate outputs on your own data, run the python scripts 'generate_outputs_labelled.py' for labelled data or 'generate_outputs_unlabelled.py' for unlabelled data. The model is in evaluation mode in these scripts.
 
+To fine-tune the model on your data, you will need to set the model to training mode using:
+```python
+model.train()
+```
 
 ## Contact
 

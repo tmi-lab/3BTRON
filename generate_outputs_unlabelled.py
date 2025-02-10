@@ -21,7 +21,7 @@ torch.__version__
 
 set_seed(44)
 
-device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f'Selected device: {device}')
 
 torch.cuda.is_available()

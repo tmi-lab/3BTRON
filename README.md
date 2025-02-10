@@ -45,9 +45,10 @@ conda env list
 
 To generate outputs on your own data, you will first need to load the model before setting the model to evaluation mode:
 ```python
+from torchvision import models
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 resnet50 = models.resnet50(weights='DEFAULT')
 model = mixedresnetnetwork(model=resnet50, embeddings=resnet50.fc.in_features)
-print(model)
 
 SAVE_END_MODEL=True
 

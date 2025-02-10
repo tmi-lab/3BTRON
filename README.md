@@ -8,15 +8,11 @@ Here, we provide a description of the files made available in this repository.
 
 ### The Model
 
-To promote the sharing of resources, we provide the trained model described in the paper, optimized for the PyTorch framework (3BTRON.pt).
+To promote the sharing of resources, we provide the trained model described in the paper, optimised for the PyTorch framework (3BTRON.pt).
 
 ### Code
 
 This folder contains all associated code (including scripts for data pre-processing, training and evaluation, stratification and for generating and visualising GradCAM heatmaps).
-
-### Dependencies
-
-The 'requirements.txt' file lists all the dependencies needed to install and run the model and associated code. Please follow the set-up instructions below.
 
 ### Data
 
@@ -28,7 +24,11 @@ Scripts for experiments and figures presented in this study will be made availab
 
 ## Set-up
 
+
+
 ## Running the Model
+
+
 
 ## Contact
 

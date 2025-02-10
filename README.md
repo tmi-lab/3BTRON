@@ -10,7 +10,7 @@ Here, we provide a description of the files made available in this repository.
 
 To promote the sharing of resources, we provide the trained model described in the paper, optimised for the PyTorch framework (3BTRON.pt).
 
-### Code
+### Scripts
 
 This folder contains all associated code (including scripts for data pre-processing, training and evaluation, stratification and for generating and visualising GradCAM heatmaps).
 
@@ -20,7 +20,7 @@ The data presented in this study can be found on Zenodo at:
 
 ### Experiments
 
-Scripts for experiments and figures presented in this study will be made available by the corresponding author upon reasonable request. 
+Code for experiments and figures presented in this study will be made available by the corresponding author upon reasonable request. 
 
 ## Set-up
 

@@ -24,6 +24,8 @@ Code for experiments and figures presented in this study will be made available 
 
 ## Set-up
 
+For this, you will need to have conda installed (find more information here: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
+
 Create the environment from the environment.yml file:
 ```python
 conda env create -f environment.yml

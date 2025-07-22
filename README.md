@@ -68,6 +68,27 @@ model.train()
 ```
 To adapt the model to your own data, you will need to retrain the model from scratch.
 
+## Citation
+
+If you use this code in any way, please refer to it by citing my paper "[3BTRON: A Blood-Brain Barrier Recognition Network](https://doi.org/10.1038/s42003-025-08453-6)": 
+
+- Bibtex:
+```
+@article{Fletcher-Lloyd,
+	author={Nan Fletcher-Lloyd and Isabel Bravo-Ferrer and Katrine Gaasdal-Bech and Blanca Díaz Castro and Payam Barnaghi},
+	year={2025},
+    month={Jul 4},
+	title={{3BTRON}: A Blood-Brain Barrier Recognition Network},
+	journal={Communications Biology},
+	volume={8},
+	number={1},
+	pages={1001},
+	isbn={2399-3642},
+	url={https://link.springer.com/article/10.1038/s42003-025-08453-6},
+	doi={10.1038/s42003-025-08453-6},
+	pmid={40615521}
+}
+```
 ## Contact
 
 This code in maintained by Nan Fletcher-Lloyd. 

@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/930454393.svg)](https://doi.org/10.5281/zenodo.15682541)
 
-This is the repository associated with the paper "3BTRON: A Blood-Brain Barrier Recognition Network". 
+This is the repository associated with the paper "[3BTRON: A Blood-Brain Barrier Recognition Network](https://doi.org/10.1038/s42003-025-08453-6)". 
 
 ## Files
 

@@ -16,6 +16,10 @@ from code_files.preprocessing import ( # type: ignore
 from code_files.models import ( # type: ignore
     mixedresnetnetwork
 ) 
+from code_files.stratification import ( #type: ignore
+    evaluate_on_test_set,
+    assign_traffic_light
+)
 
 torch.__version__
 

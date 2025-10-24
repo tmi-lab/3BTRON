@@ -28,7 +28,12 @@ Code for experiments and figures presented in this study will be made available 
 
 For this, you will need to have conda installed (find more information here: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
-Create the environment from the environment.yml file:
+Before creating the environment, you will need to update your base environment. To do so, in your terminal, write the following line of code:
+```python
+conda update --all
+```
+
+Now, still in the terminal, you can create the environment from the environment.yml file:
 ```python
 conda env create -f environment.yml
 ```

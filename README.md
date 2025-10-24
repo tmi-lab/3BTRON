@@ -28,7 +28,7 @@ Code for experiments and figures presented in this study will be made available 
 
 For this, you will need to have conda installed (find more information here: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
-Before creating the environment, you will need to update your base environment. If you don't do this, you will receive a numpy error. To do so, in your terminal, write the following line of code:
+Before creating the environment, you will need to update your base environment. If you don't do this, you will receive a numpy error when trying to load and run the model. Update your base environment in your terminal:
 ```python
 conda update --all
 ```

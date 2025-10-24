@@ -63,7 +63,11 @@ model = mixedresnetnetwork(model=resnet50, embeddings=resnet50.fc.in_features)
 SAVE_END_MODEL=True
 
 if SAVE_END_MODEL:
+	# comment out the necessary line
+    ## if using a gpu
     model.load_state_dict(torch.load('./3BTRON.pt')) # for this to work, your notebook must be saved in the same folder as '3BTRON.pt' and the 'scripts' folder.
+    ## if running on a CPU-only machine
+    model.load_state_dict(torch.load('./3BTRON.pt', map_location=torch.device('cpu'))) # for this to work, your notebook must be saved in the same folder as '3BTRON.pt' and the 'scripts' folder.
 
 model = model.to(device)
 model.eval()

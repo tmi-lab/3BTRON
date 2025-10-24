@@ -73,13 +73,13 @@ if SAVE_END_MODEL:
 model = model.to(device)
 model.eval()
 ```
+For worked examples of how to run the model on your own data, you can use the notebooks provided above. For working with labelled data, use 'generate_outputs_labelled.ipynb' or for unlabelled data, use 'generate_outputs_unlabelled.ipynb'. Note, your data must be pre-processed as in the 'preprocessing.py' script. Depending on whether your data is labelled or unlabelled, the appropriate functions are denoted by inline comments. 
+
 To fine-tune the model on your own data, you will need to set the model to training mode using:
 ```python
 model.train()
 ```
 To adapt the model to your own data, you will need to retrain the model from scratch.
-
-For examples of how to run the model on your own data, you can use the notebooks provided above. For working with labelled data, use 'generate_outputs_labelled.ipynb' or for unlabelled data, use 'generate_outputs_unlabelled.ipynb'.
 
 ## Citation
 

@@ -28,7 +28,7 @@ Code for experiments and figures presented in this study will be made available 
 
 For this, you will need to have conda installed (find more information here: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
-Before creating the environment, you will need to update your base environment. To do so, in your terminal, write the following line of code:
+Before creating the environment, you will need to update your base environment. If you don't do this, you will receive a numpy error when trying to load and run the model. Update your base environment in your terminal:
 ```python
 conda update --all
 ```
@@ -48,9 +48,9 @@ Verify that the environment was installed correctly:
 conda env list
 ```
 
-## Running the Model
+## Loading the Model
 
-To generate outputs on your own data, you will first need to load the model before setting the model to evaluation mode:
+To generate outputs on your own data, you will first need to load the model before setting the model to evaluation mode. In a new Jupyter notebook, run the following:
 ```python
 import torch
 from torchvision import models
@@ -63,12 +63,17 @@ model = mixedresnetnetwork(model=resnet50, embeddings=resnet50.fc.in_features)
 SAVE_END_MODEL=True
 
 if SAVE_END_MODEL:
-    model.load_state_dict(torch.load('./3BTRON.pt'))
+	# for this to work, your notebook must be saved in the same folder as '3BTRON.pt' and the 'scripts' folder.
+	# depending on your machine, comment out the line you don't need
+    ## if using a gpu
+    model.load_state_dict(torch.load('./3BTRON.pt')) 
+    ## if running on a CPU-only machine
+    model.load_state_dict(torch.load('./3BTRON.pt', map_location=torch.device('cpu'))) 
 
 model = model.to(device)
 model.eval()
 ```
-Alternatively, you can run the python scripts 'generate_outputs_labelled.py' for labelled data or 'generate_outputs_unlabelled.py' for unlabelled data.
+For worked examples of how to run the model on your own data, you can use the notebooks provided above. For working with labelled data, use 'generate_outputs_labelled.ipynb' or for unlabelled data, use 'generate_outputs_unlabelled.ipynb'. Note, your data must be pre-processed as in the 'preprocessing.py' script. Depending on whether your data is labelled or unlabelled, the appropriate functions are denoted by inline comments. 
 
 To fine-tune the model on your own data, you will need to set the model to training mode using:
 ```python

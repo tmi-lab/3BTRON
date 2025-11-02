@@ -75,20 +75,23 @@ model.eval()
 ```
 To run the model on your own unlabelled data, you can use the notebook provided above ('generate_outputs.ipynb'). 
 
-This repository includes the preprocessing code ('preprocessing.py', specifically the 'middle_age_data_preprocessing' class for unlabelled data) designed for the datasets used in our study. The preprocessing assumes certain file naming conventions and metadata formats (e.g. CSV column names like path, label, sex, and region). If your dataset differs in structure, naming, or formatting, you can still reproduce our pipeline by adapting your data to meet the following assumptions:
+This repository includes the preprocessing code ('preprocessing.py', specifically the `middle_age_data_preprocessing` class for unlabelled data) designed for the datasets used in our study. The preprocessing assumes certain file naming conventions and metadata formats (e.g. CSV column names like `path`, `label`, `sex`, and `region`). If your dataset differs in structure, naming, or formatting, you can still reproduce our pipeline by adapting your data to meet the following assumptions:
 
-- Each image file name should uniquely identify a sample (e.g. sampleIDvesselID_extension.tif).
+- Each image file name should uniquely identify a sample (e.g. `sampleIDvesselID_extension.tif`).
 - The CSV file should contain at least the following columns:
- - path: matching the image identifiers (before extension/underscores)
- - label: chronological age group (e.g. "Middle age")
- - sex: categorical value ('F' or 'M')
- - region: categorical value ('CC', 'HC', or 'PFC')
-- All images should be readable by the load_image() function and stored under data_dir.
+ - `path`: matching the image identifiers (before extension/underscores)
+ - `label`: chronological age group (e.g. "Middle age")
+ - `sex`: categorical value ('F' or 'M')
+ - `region`: categorical value ('CC', 'HC', or 'PFC')
+- All images should be readable by the `load_image()` function and stored under `data_dir`.
   
 If your dataset uses different conventions, you can modify the preprocessing accordingly, for instance, by:
-- Updating how paths are parsed in the section: images.loc[i, 'path'] = images.loc[i, 'path'].split("/")[-1].split("_")[0].split(".")[0]
+- Updating how paths are parsed in the section:
+  ```
+  images.loc[i, 'path'] = images.loc[i, 'path'].split("/")[-1].split("_")[0].split(".")[0]
+  ```
 - Renaming columns in your metadata CSV to match expected column names.
-- Adjusting possible_sexes or possible_regions if your dataset includes different categories.
+- Adjusting `possible_sexes` or `possible_regions` if your dataset includes different categories.
 
 We encourage users to document any modifications made to preprocessing to ensure transparency and reproducibility.
 

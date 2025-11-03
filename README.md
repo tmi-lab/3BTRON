@@ -14,7 +14,7 @@ To promote the sharing of resources, we provide the trained model described in t
 
 ### Scripts
 
-This folder contains all associated code (including scripts for data pre-processing, training and evaluation, stratification and for generating and visualising GradCAM heatmaps).
+This folder contains all associated code (including scripts for data pre-processing, training and evaluation, stratification, and for generating and visualising GradCAM heatmaps).
 
 ### Data
 
@@ -73,13 +73,33 @@ if SAVE_END_MODEL:
 model = model.to(device)
 model.eval()
 ```
-For worked examples of how to run the model on your own data, you can use the notebooks provided above. For working with labelled data, use 'generate_outputs_labelled.ipynb' or for unlabelled data, use 'generate_outputs_unlabelled.ipynb'. Note, your data must be pre-processed as in the 'preprocessing.py' script. Depending on whether your data is labelled or unlabelled, the appropriate functions are denoted by inline comments. 
+To run the model and get visualisations on your own unlabelled data, you can use the notebooks provided above ('generate_outputs.ipynb' and 'get_visualisations.ipynb').
 
 To fine-tune the model on your own data, you will need to set the model to training mode using:
 ```python
 model.train()
 ```
 To adapt the model to your own data, you will need to retrain the model from scratch.
+
+This repository includes the preprocessing code ('preprocessing.py') designed for the datasets used in our study. The preprocessing assumes certain file naming conventions and metadata formats (e.g. CSV column names like `path`, `label`, `sex`, and `region`). If your dataset differs in structure, naming, or formatting, you can still reproduce our pipeline by adapting your data to meet the following assumptions:
+
+- Each image file name should uniquely identify a sample (e.g. `sampleIDvesselID_extension.tif`).
+- The CSV file should contain at least the following columns:
+ - `path`: matching the image identifiers (before extension/underscores)
+ - `label`: chronological age group (e.g. "Aged", "Middle age", "Young")
+ - `sex`: categorical value ('F' or 'M')
+ - `region`: categorical value ('CC', 'HC', or 'PFC')
+- All images should be readable by the `load_image()` function and stored under `data_dir`.
+  
+If your dataset uses different conventions, you can modify the preprocessing accordingly, for instance, by:
+- Updating how paths are parsed in the section:
+  ```
+  images.loc[i, 'path'] = images.loc[i, 'path'].split("/")[-1].split("_")[0].split(".")[0]
+  ```
+- Renaming columns in your metadata CSV to match expected column names.
+- Adjusting `possible_sexes` or `possible_regions` if your dataset includes different categories.
+
+We encourage users to document any modifications made to preprocessing to ensure transparency and reproducibility.
 
 ## Citation
 

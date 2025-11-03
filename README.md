@@ -73,7 +73,7 @@ if SAVE_END_MODEL:
 model = model.to(device)
 model.eval()
 ```
-To run the model on your own unlabelled data, you can use the notebook provided above ('generate_outputs.ipynb'). 
+To run the model and get visualisations on your own unlabelled data, you can use the notebooks provided above ('generate_outputs.ipynb' and 'get_visualisations.ipynb').
 
 To fine-tune the model on your own data, you will need to set the model to training mode using:
 ```python
